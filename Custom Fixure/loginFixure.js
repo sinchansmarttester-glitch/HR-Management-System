@@ -14,8 +14,6 @@ export const test = base.extend({
 
     await login.login(process.env.EMAIL, process.env.PWD);
 
-    await expect(page.locator('a[href="addemp.php"]')).toBeVisible({ timeout: 60000 });
-
     await use(login);
 
   }

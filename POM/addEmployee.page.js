@@ -2,7 +2,7 @@ class AddEmployee
 {
     constructor(page)
     {
-        this.addEmployeeButton = page.locator('a[href="addemp.php"]')
+        this.addEmployeeButton = page.locator("//li/a[@href='addemp.php']")
         this.firstNameInput = page.locator("//input[@placeholder='First Name']")
         this.lastNameInput = page.locator("//input[@placeholder='Last Name']")
         this.emailInput = page.locator("//input[@placeholder='Email']")
