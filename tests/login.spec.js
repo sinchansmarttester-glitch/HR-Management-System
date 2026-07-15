@@ -8,7 +8,7 @@ import { readExcel } from '../utils/excelUtility.js'
 test('Login Test', async ({ page, loginFixture }) => {
   //await expect(page).toHaveURL('http://49.249.29.4:8081/TestServer/Build/Employee_Management_System//aloginwel.php')
   const employeeData = readExcel('employees.xlsx', 'Employees')
-  const employee = employeeData[1]
+  const employee = employeeData[0]
   const addEmp = new AddEmployee(page)
   const viewEmp = new ViewEmployee(page)
   const assignProject = new AssignProject(page)
