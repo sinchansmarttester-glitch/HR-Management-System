@@ -19,6 +19,7 @@ class AddEmployee
     }
     async addEmployee(firstName,lastName,email,birthday,phone,nid,address,department,degree,salary)
     {
+        await this.addEmployeeButton.page().waitForLoadState('networkidle')
         await this.addEmployeeButton.click({ timeout: 60000 })
         await this.firstNameInput.waitFor({ state: 'visible', timeout: 60000 })
         await this.firstNameInput.fill(firstName)
