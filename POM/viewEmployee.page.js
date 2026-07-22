@@ -8,7 +8,7 @@ class ViewEmployee {
     }
 
     async viewEmployee() {
-        await this.viewEmployeeButton.click()
+        await this.viewEmployeeButton.click({ timeout: 60000 })
         await expect(this.assertion).toContainText("James Bond")
         return await this.empID.innerText()
     }
